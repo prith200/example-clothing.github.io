@@ -280,9 +280,9 @@
         }
 
         document.getElementById('orderForm').addEventListener('submit', function(e) {
+            addCartItemsToForm(cart);
             alert('Order placed successfully! We will confirm your order on WhatsApp.');
             cart.length = 0;
-            addCartItemsToForm(cart);
      //       renderCart();
      //       toggleCart();
         });
