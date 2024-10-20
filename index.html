@@ -221,7 +221,16 @@
         function addToCart(productId) {
             const product = products.find(p => p.id === productId);
             const size = document.querySelector(`#productGrid .product-card:nth-child(${productId}) .size-select`).value;
+            // Check if the item with the same size already exists in the cart
+            const existingItem = cart.find(item => item.id === productId && item.size === size);
+
+            if (existingItem) {
+            // If the item exists, increase its quantity
+              existingItem.quantity += 1;
+            } else {
+            // If it doesn't exist, add it as a new entry
             cart.push({ ...product, size, quantity: 1 });
+            }
             renderCart();
         }
 
