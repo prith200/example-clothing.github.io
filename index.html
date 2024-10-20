@@ -178,12 +178,12 @@
 
     <script>
         const products = [
-            { id: 1, name: 'T-Shirt', price: 249, image: '/pngimages/IronManTshirt.png', size: ['S','M'] },
-            { id: 2, name: 'Jeans', price: 2000, image: '/pngimages/Jeans.png', size: ['S','M','L','XL','XXL','3XL','5XL'] },
-            { id: 3, name: 'Hoodie', price: 499, image: '/pngimages/DrStrangeHoodie.png', size: ['XL','XXL','3XL']  },
-            { id: 4, name: 'Dress', price: 2999, image: '/pngimages/RedDress.png', size: ['S','M','L','XL']},
-            { id: 5, name: 'Belt', price: 100, image: '/pngimages/Belt.png', size: ['50cm','80cm'] },
-            { id: 6, name: 'Sunglasses', price: 250, image: '/pngimages/Sunglasses.png', size: [' '] },
+            { id: 1, name: 'T-Shirt', price: 249, image: 'pngimages/IronManTshirt.png', size: ['S','M'] },
+            { id: 2, name: 'Jeans', price: 2000, image: 'pngimages/Jeans.png', size: ['S','M','L','XL','XXL','3XL','5XL'] },
+            { id: 3, name: 'Hoodie', price: 499, image: 'pngimages/DrStrangeHoodie.png', size: ['XL','XXL','3XL']  },
+            { id: 4, name: 'Dress', price: 2999, image: 'pngimages/RedDress.png', size: ['S','M','L','XL']},
+            { id: 5, name: 'Belt', price: 100, image: 'pngimages/Belt.png', size: ['50cm','80cm'] },
+            { id: 6, name: 'Sunglasses', price: 250, image: 'pngimages/Sunglasses.png', size: [' '] },
         ];
 
         var cart = [];
@@ -192,7 +192,7 @@
             const productGrid = document.getElementById('productGrid');
             productGrid.innerHTML = products.map(product => `
                 <div class="product-card">
-                    <img src="{${product.image} | relative_url}" alt="${product.name}" width="200" height="200">
+                    <img src="${product.image}" alt="${product.name}" width="200" height="200">
                     <h3>${product.name}</h3>
                     <p>Rs${product.price.toFixed(2)}</p>
                     <select class="size-select" id="${product.id}">  
