@@ -192,7 +192,7 @@
             const productGrid = document.getElementById('productGrid');
             productGrid.innerHTML = products.map(product => `
                 <div class="product-card">
-                    <img src="${product.image}" alt="${product.name}" width="200" >
+                    <img src="${product.image}" alt="${product.name}" width="200" height="200">
                     <h3>${product.name}</h3>
                     <p>Rs${product.price.toFixed(2)}</p>
                     <select class="size-select" id="${product.id}">  
