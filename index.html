@@ -245,7 +245,7 @@
             `).join('');
 
             updateCartTotal();
-            addCartItemsToForm(cart);
+           
         }
 
         function updateQuantity(index, change) {
@@ -273,6 +273,7 @@
         document.getElementById('orderForm').addEventListener('submit', function(e) {
             alert('Order placed successfully! We will confirm your order on WhatsApp.');
             cart.length = 0;
+            addCartItemsToForm(cart);
      //       renderCart();
      //       toggleCart();
         });
