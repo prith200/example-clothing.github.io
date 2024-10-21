@@ -307,6 +307,13 @@
                 inputName.value = item.name;
                 form.appendChild(inputName);
 
+                // Create hidden input for item size
+                const inputName = document.createElement('input');
+                inputName.type = 'hidden';
+                inputName.name = `cartItems[${index}][size]`;
+                inputName.value = item.size;
+                form.appendChild(inputSize);
+
                 // Create hidden input for item price
                 const inputPrice = document.createElement('input');
                 inputPrice.type = 'hidden';
